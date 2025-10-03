@@ -1,0 +1,61 @@
+/* General reset and body styling */
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Gallery grid container */
+.gallery {
+    display: grid;
+    gap: 15px;
+}
+
+/* Figure styling */
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    /* Optional border */
+    display: block;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Responsive breakpoints */
+
+/* Default: mobile (one image per row) */
+@media (min-width: 0px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Starting at 400px: two across */
+@media (min-width: 400px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Starting at 600px: three across */
+@media (min-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Starting at 1000px: six across */
+@media (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
